@@ -4,6 +4,7 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   this.timeBetweenSteps = timeBetweenSteps;
   this.top = top;
   this.left = left;
+  this.step();
   // this.setPosition(this.top, this.left);
 };
 

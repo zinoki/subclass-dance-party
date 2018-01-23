@@ -28,7 +28,7 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
-    dancer.step();
+    // dancer.step();
     dancer.setPosition(dancer.top, dancer.left);
   });
 });
