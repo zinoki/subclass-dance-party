@@ -15,3 +15,11 @@ makeDancer.prototype.repeater = function() {
   // it just schedules the next step
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
+
+makeDancer.prototype.lineUp = function(spacer) {
+  this.$node.animate({top: '80%', left: spacer});
+};
+
+makeDancer.prototype.moveTo = function(destinationTop, destinationLeft) {
+  this.$node.animate({top: destinationTop, left: destinationLeft});
+};

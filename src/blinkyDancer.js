@@ -15,3 +15,4 @@ makeBlinkyDancer.prototype.step = function() {
   this.repeater();
   this.$node.toggle();
 };
+

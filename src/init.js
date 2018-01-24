@@ -30,6 +30,14 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
     // dancer.step();
     dancer.setPosition(dancer.top, dancer.left);
+    window.dancers.push(dancer);
+  });
+  $('.addLineUpButton').on('click', function(event) {
+    
+    for (var i = 0; i < window.dancers.length; i++) {
+      var spacer = 100 / window.dancers.length * i;
+      spacer = spacer + '%';
+      window.dancers[i].lineUp(spacer);
+    }
   });
 });
-
