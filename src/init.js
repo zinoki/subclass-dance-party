@@ -31,6 +31,15 @@ $(document).ready(function() {
     // dancer.step();
     dancer.setPosition(dancer.top, dancer.left);
     window.dancers.push(dancer);
+    $('.wallflower').off('mouseenter mouseleave');
+    $('.wallflower').hover(function(event) {
+      $(this).animate({top: 1000 * Math.random(), left: 1000 * Math.random()});
+      // $(this).css('top', '0');
+    }, function() {});
+    $('.pair').css('visibility', 'visible');
+  });
+  $('.rickButton').on('click', function() {
+    rickDancer();
   });
   $('.addLineUpButton').on('click', function(event) {
     
@@ -40,4 +49,5 @@ $(document).ready(function() {
       window.dancers[i].lineUp(spacer);
     }
   });
+
 });

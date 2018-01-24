@@ -33,3 +33,21 @@ describe('blinkyDancer', function() {
     });
   });
 });
+
+describe('wallflowerDancer', function() {
+  
+  var wallflower;
+  
+  beforeEach(function() {
+    wallflower = new wallflowerDancer(100, 100, 1000);
+  });
+  
+  it('should have a jQuery $node object', function() {
+    expect(wallflower.$node).to.be.an.instanceof(jQuery);
+  });
+
+  it('should have node with class "wallflower" ', function() {
+    expect(wallflower.$node[0].classList.contains('wallflower')).to.be.true;
+  });
+
+});
